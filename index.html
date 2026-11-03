@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>산지통 | 통영 산지 직송 수산물</title>
+<meta name="description" content="통영 작업장에서 손질한 굴, 장어, 바지락, 홍가리비를 오후 4시 전 주문 당일 출고합니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&family=Noto+Serif+KR:wght@700;900&display=swap">
+<style>
+/* Layout: 휴대폰 우선 한 페이지. 헤더 → 바다 사진 히어로(구매 버튼) → 약속 3가지 → 대표 상품 4개 → 작업장 이야기 → 도매 문의 → 사업자 정보 */
+:root{
+  --ink:#10283a; --sea:#1d5b74; --buoy:#e2552b; --paper:#ffffff; --mist:#edf3f4; --muted:#5b6b73; --line:#d6e1e4;
+  --serif:"Noto Serif KR","Noto Serif CJK KR",serif;
+  --sans:"Noto Sans KR","Noto Sans CJK KR","Malgun Gothic",sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65;margin:0}
+.in{max-width:1080px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+img{display:block;width:100%;height:auto}
+a{color:inherit}
+h2{font-family:var(--serif);font-weight:900;font-size:clamp(26px,4.4vw,38px);line-height:1.3;margin:0;text-wrap:balance}
+.eyebrow{font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--buoy)}
+.lead{color:var(--muted);margin:0;max-width:52ch}
+section{padding-block:72px}
+
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--ink);color:#fff}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--ink)}
+header .in{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
+.logo{font-family:var(--serif);font-weight:900;font-size:24px;letter-spacing:.04em;text-decoration:none}
+nav{display:flex;gap:20px;font-size:15px}
+nav a{text-decoration:none;opacity:.85}
+nav a:hover{opacity:1}
+@media (max-width:560px){nav a:not(.cta){display:none}}
+nav .cta{background:var(--buoy);padding:6px 14px;border-radius:999px;opacity:1;font-weight:700}
+
+.hero{position:relative;color:#fff;padding:0;min-height:520px;display:grid}
+.hero img{position:absolute;inset:0;height:100%;object-fit:cover}
+.hero .shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,30,44,.9) 10%,rgba(10,30,44,.25))}
+.hero .in{position:relative;align-self:end;padding-block:56px;display:grid;gap:14px;width:100%}
+.hero h1{font-family:var(--serif);font-weight:900;font-size:clamp(40px,8vw,72px);line-height:1.1;margin:0;letter-spacing:-.02em}
+.hero p{margin:0;font-size:clamp(17px,2.4vw,21px);max-width:30ch}
+.hero .eyebrow{color:#ffb08f}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 20px;border-radius:10px;font-weight:700;text-decoration:none;font-size:16px}
+.btn.solid{background:var(--buoy);color:#fff}
+.btn.ghost{border:1.5px solid rgba(255,255,255,.7);color:#fff}
+.btn.dark{background:var(--ink);color:#fff}
+.btn:focus-visible{outline:3px solid #ffb08f;outline-offset:2px}
+
+.promise{background:var(--ink);color:#fff;padding-block:0}
+.promise .in{display:grid;grid-template-columns:repeat(3,1fr)}
+.promise div div{padding:22px 8px;text-align:center}
+.promise b{display:block;font-size:clamp(16px,2.6vw,20px)}
+.promise span{font-size:13px;opacity:.75}
+
+.head{display:grid;gap:10px;margin-bottom:32px}
+.goods{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+@media (max-width:860px){.goods{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.card{display:grid;gap:10px;align-content:start}
+.card img{aspect-ratio:1/1;object-fit:cover;border-radius:12px;max-width:100%}
+.card b{font-size:18px}
+.card span{font-size:14px;color:var(--muted);line-height:1.5}
+.badge{justify-self:start;font-size:12px;font-weight:700;color:var(--buoy);background:#fdebe4;padding:2px 9px;border-radius:999px}
+
+.story{background:var(--mist)}
+.story .in{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+@media (max-width:760px){.story .in{grid-template-columns:1fr}}
+.story .pics{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.story .pics img{border-radius:12px;aspect-ratio:4/5;object-fit:cover}
+.story ol{margin:18px 0 0;padding-left:20px;display:grid;gap:6px;color:var(--muted)}
+
+.whole .box{border:1.5px solid var(--line);border-radius:16px;padding:32px;display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
+.whole .box>div{display:grid;gap:8px;min-width:0;flex:1 1 320px}
+.phone{font-family:var(--serif);font-size:26px;font-weight:900;color:var(--sea);user-select:all}
+
+footer{background:var(--ink);color:rgba(255,255,255,.8);padding-block:44px 56px;font-size:13px;line-height:1.9}
+footer .logo{color:#fff;font-size:22px;display:inline-block;margin-bottom:12px}
+footer dl{display:grid;grid-template-columns:max-content 1fr;gap:0 16px;margin:0}
+footer dt{opacity:.6} footer dd{margin:0}
+.todo{background:#fff3c4;color:#5a4300;padding:0 4px;border-radius:3px}
+</style>
+</head><body>
+
+<header class="top"><div class="in">
+  <a class="logo" href="#top">산지통</a>
+  <nav><a href="#goods">상품</a><a href="#story">작업장</a><a href="#whole">도매 문의</a><a class="cta" href="#buy">구매하기</a></nav>
+</div></header>
+
+<section class="hero" id="top">
+  <img src="home-hero.jpg" alt="통영 굴 양식장에서 굴 줄을 끌어올리는 모습">
+  <div class="shade"></div>
+  <div class="in" id="buy">
+    <div class="eyebrow">경남 통영 · 산지 직송</div>
+    <h1>통영 바다에서<br>바로 보냅니다</h1>
+    <p>굴, 장어, 조개를 통영 작업장에서 손질해 오후 4시 전 주문은 그날 출고해요.</p>
+    <div class="btns">
+      <a class="btn solid" href="#">스마트스토어에서 구매</a>
+      <a class="btn ghost" href="#">쿠팡에서 구매</a>
+      <a class="btn ghost" href="#">카카오톡 상담</a>
+    </div>
+  </div>
+</section>
+
+<section class="promise"><div class="in">
+  <div><b>당일 출고</b><span>오후 4시 전 주문</span></div>
+  <div><b>아이스박스</b><span>얼음 채워 포장</span></div>
+  <div><b>5만 원 이상</b><span>무료배송</span></div>
+</div></section>
+
+<section id="goods"><div class="in">
+  <div class="head"><div class="eyebrow">PRODUCTS</div><h2>지금 제철인 것만</h2><p class="lead">공급이 매일 바뀌는 산지 상품이라, 그날 들어온 좋은 것만 올려요.</p></div>
+  <div class="goods">
+    <div class="card"><img src="home-oyster.jpg" alt="통영 생굴"><span class="badge">11월 제철</span><b>통영 생굴</b><span>1kg · 2kg · 3kg<br>깐굴, 세척 후 소포장</span></div>
+    <div class="card"><img src="home-eel.jpg" alt="손질 바다장어"><b>손질 바다장어</b><span>1kg (손질 후 600g, 3~4미)<br>내장·머리 손질 완료</span></div>
+    <div class="card"><img src="home-clam.jpg" alt="바지락"><b>바지락</b><span>2kg · 3kg<br>국, 칼국수, 술찜용</span></div>
+    <div class="card"><img src="home-scallop.jpg" alt="홍가리비"><b>홍가리비</b><span>2kg · 3kg · 5kg<br>찜, 구이용</span></div>
+  </div>
+</div></section>
+
+<section class="story" id="story"><div class="in">
+  <div class="pics"><img src="home-rinse.jpg" alt="깐 굴을 헹구는 작업"><img src="home-box.jpg" alt="아이스박스 포장"></div>
+  <div class="head" style="margin:0">
+    <div class="eyebrow">OUR STORY</div>
+    <h2>산지 작업장과<br>직접 거래합니다</h2>
+    <p class="lead">산지통은 통영 수산 작업장과 직접 손잡고 운영해요. 중간 도매상을 거치지 않으니 바다에서 식탁까지 걸리는 시간이 짧습니다.</p>
+    <ol><li>통영 양식장에서 들어온 그날 물건</li><li>작업장에서 세척, 손질, 선별</li><li>주문 중량대로 소포장 후 아이스박스 출고</li></ol>
+  </div>
+</div></section>
+
+<section class="whole" id="whole"><div class="in">
+  <div class="box">
+    <div><div class="eyebrow">B2B</div><h2>식당 · 셀러 대량 구매</h2><p class="lead">식당 납품, 온라인 셀러 위탁 판매, 단체 주문은 전화로 문의해주세요. 품목별 공급가와 상세페이지 이미지를 드려요.</p></div>
+    <div><span class="lead">고객센터</span><div class="phone">010-9761-1744</div><a class="btn dark" href="tel:01097611744">전화 걸기</a></div>
+  </div>
+</div></section>
+
+<footer><div class="in">
+  <span class="logo">산지통</span>
+  <dl>
+    <dt>상호</dt><dd>알티오(Altio) · 브랜드 산지통</dd>
+    <dt>대표자</dt><dd>이동준</dd>
+    <dt>사업자등록번호</dt><dd>850-28-00087</dd>
+    <dt>통신판매업 신고</dt><dd>2015-인천서구-0822</dd>
+    <dt>주소</dt><dd>인천광역시 서해구 중봉대로612번길 10-22, 우리프라자 5층 504호</dd>
+    <dt>고객센터</dt><dd>010-9761-1744</dd>
+    <dt>이메일</dt><dd>lj@sanjitong.com</dd>
+  </dl>
+  <p style="margin:16px 0 0;opacity:.6">© 산지통. 통영 산지에서 바로 보냅니다.</p>
+</div></footer>
+
+</body></html>
