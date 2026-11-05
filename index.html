@@ -61,7 +61,14 @@ nav .cta{background:var(--buoy);padding:6px 14px;border-radius:999px;opacity:1;f
 .card span{font-size:14px;color:var(--muted);line-height:1.5}
 .badge{justify-self:start;font-size:12px;font-weight:700;color:var(--buoy);background:#fdebe4;padding:2px 9px;border-radius:999px}
 
-.story{background:var(--mist)}
+.today{background:var(--mist)}
+.gal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:640px){.gal{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.gal figure{margin:0;display:grid;gap:6px}
+.gal img{border-radius:10px;aspect-ratio:1/1;object-fit:cover;max-width:100%}
+.gal figcaption{font-size:13px;color:var(--muted)}
+.date{justify-self:start;display:inline-block;font-size:13px;font-weight:700;color:var(--sea);background:#fff;border:1px solid var(--line);padding:3px 10px;border-radius:999px}
+.story{background:var(--paper)}
 .story .in{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
 @media (max-width:760px){.story .in{grid-template-columns:1fr}}
 .story .pics{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -82,7 +89,7 @@ footer dt{opacity:.6} footer dd{margin:0}
 
 <header class="top"><div class="in">
   <a class="logo" href="#top">산지통</a>
-  <nav><a href="#goods">상품</a><a href="#story">작업장</a><a href="#whole">도매 문의</a><a class="cta" href="#buy">구매하기</a></nav>
+  <nav><a href="#goods">상품</a><a href="#today">오늘 입고</a><a href="#story">작업장</a><a href="#whole">도매 문의</a><a class="cta" href="#buy">구매하기</a></nav>
 </div></header>
 
 <section class="hero" id="top">
@@ -113,6 +120,18 @@ footer dt{opacity:.6} footer dd{margin:0}
     <div class="card"><img src="home-eel.jpg" alt="손질 바다장어"><b>손질 바다장어</b><span>1kg (손질 후 600g, 3~4미)<br>내장·머리 손질 완료</span></div>
     <div class="card"><img src="home-clam.jpg" alt="바지락"><b>바지락</b><span>2kg · 3kg<br>국, 칼국수, 술찜용</span></div>
     <div class="card"><img src="home-scallop.jpg" alt="홍가리비"><b>홍가리비</b><span>2kg · 3kg · 5kg<br>찜, 구이용</span></div>
+  </div>
+</div></section>
+
+<section class="today" id="today"><div class="in">
+  <div class="head"><div class="eyebrow">TODAY</div><h2>오늘 작업장에 들어온 물건</h2><p class="lead">사진 속 날짜와 시간은 촬영 때 자동으로 찍힌 거예요. 보내드리는 물건이 이렇게 들어와서 손질됩니다.</p><span class="date">2026년 11월 4일(수) 오전</span></div>
+  <div class="gal">
+    <figure><img src="today-1.jpg" alt="수조에서 건진 바다장어" loading="lazy"><figcaption>바다장어 · 수조에서 바로 건진 것</figcaption></figure>
+    <figure><img src="today-2.jpg" alt="세척 중인 통영 깐굴" loading="lazy"><figcaption>통영 생굴 · 깐 직후 세척</figcaption></figure>
+    <figure><img src="today-3.jpg" alt="손바닥 위 하프셀 굴" loading="lazy"><figcaption>하프셀 굴 · 반껍데기 굴</figcaption></figure>
+    <figure><img src="today-4.jpg" alt="홍가리비" loading="lazy"><figcaption>홍가리비</figcaption></figure>
+    <figure><img src="today-5.jpg" alt="바지락" loading="lazy"><figcaption>바지락</figcaption></figure>
+    <figure><img src="today-6.jpg" alt="장어 수조" loading="lazy"><figcaption>장어 수조</figcaption></figure>
   </div>
 </div></section>
 
